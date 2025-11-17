@@ -59,6 +59,8 @@ python main.py
 ```
 Backend runs on `https://focusflow-b2ly.onrender.com` (local fallback: `http://localhost:8000`)
 
+If you deploy your own frontend, add its URL to `ALLOWED_ORIGINS` in `backend/main.py` so CORS permits browser calls.
+
 ### 5. Run the App
 ```bash
 npm run dev
