@@ -11,6 +11,9 @@ ENV/
 # Models (large files)
 models/*.tflite
 models/*.task
+# Bundle required detection models
+!models/efficientdet_lite0.tflite
+!models/pose_landmarker_heavy.task
 
 # IDE
 .vscode/
