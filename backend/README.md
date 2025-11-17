@@ -66,7 +66,7 @@ backend/
     └── pose_landmarker_heavy.task
 ```
 
-1. Confirm `requirements.txt` matches the pinned FastAPI/MediaPipe stack (FastAPI 0.109.0, uvicorn 0.27.0, python-multipart 0.0.6, mediapipe-python 0.10.9, opencv-python-headless 4.9.0.80, numpy 1.26.4).
+1. Confirm `requirements.txt` matches the pinned FastAPI/MediaPipe stack (FastAPI 0.109.0, uvicorn 0.27.0, python-multipart 0.0.6, mediapipe 0.10.9, opencv-python-headless 4.9.0.80, numpy 1.26.4).
 2. The Dockerfile (based on `python:3.10-slim`) installs `libgl1` + `libglib2.0-0`, copies the app, exposes `PORT=8080`, and launches `uvicorn main:app`.
 3. Deploy straight from the `backend/` directory:
    ```bash

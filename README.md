@@ -246,7 +246,7 @@ backend/
     └── pose_landmarker_heavy.task
 ```
 
-1. Ensure `requirements.txt` matches the tested stack (FastAPI, uvicorn, python-multipart, mediapipe-python, opencv-python-headless, numpy).
+1. Ensure `requirements.txt` matches the tested stack (FastAPI, uvicorn, python-multipart, mediapipe, opencv-python-headless, numpy).
 2. Use the provided `Dockerfile` in `backend/` (Python 3.10 slim, installs `libgl1` + `libglib2.0-0`, exposes `PORT=8080`, runs `uvicorn main:app`).
 3. Deploy directly from the `backend/` folder:
    ```bash
