@@ -235,11 +235,30 @@ npm run build
 # Deploy dist/ folder to Vercel
 ```
 
-### Backend (Railway)
-- Push to GitHub
-- Connect to Railway
-- Deploy as a service
-- Update frontend API URL
+### Backend (Google Cloud Run)
+```
+backend/
+├── Dockerfile
+├── main.py
+├── requirements.txt
+└── models/
+    ├── efficientdet_lite0.tflite
+    └── pose_landmarker_heavy.task
+```
+
+1. Ensure `requirements.txt` matches the tested stack (FastAPI, uvicorn, python-multipart, mediapipe-python, opencv-python-headless, numpy).
+2. Use the provided `Dockerfile` in `backend/` (Python 3.10 slim, installs `libgl1` + `libglib2.0-0`, exposes `PORT=8080`, runs `uvicorn main:app`).
+3. Deploy directly from the `backend/` folder:
+   ```bash
+   gcloud auth login
+   gcloud config set project YOUR_PROJECT_ID
+   gcloud run deploy focusflow-backend \
+     --source . \
+     --region us-central1 \
+     --allow-unauthenticated \
+     --memory 1Gi
+   ```
+4. Copy the generated `https://focusflow-backend-*.run.app` URL and set `VITE_DETECTION_API_URL` (locally and on Vercel) to that value.
 
 ## Known Issues
 

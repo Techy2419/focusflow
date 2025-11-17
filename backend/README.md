@@ -54,6 +54,32 @@ Server starts at: `https://focusflow-production-b939.up.railway.app` (local dev:
 
 API docs: `https://focusflow-production-b939.up.railway.app/docs`
 
+## Deploying to Google Cloud Run
+
+```
+backend/
+├── Dockerfile
+├── main.py
+├── requirements.txt
+└── models/
+    ├── efficientdet_lite0.tflite
+    └── pose_landmarker_heavy.task
+```
+
+1. Confirm `requirements.txt` matches the pinned FastAPI/MediaPipe stack (FastAPI 0.109.0, uvicorn 0.27.0, python-multipart 0.0.6, mediapipe-python 0.10.9, opencv-python-headless 4.9.0.80, numpy 1.26.4).
+2. The Dockerfile (based on `python:3.10-slim`) installs `libgl1` + `libglib2.0-0`, copies the app, exposes `PORT=8080`, and launches `uvicorn main:app`.
+3. Deploy straight from the `backend/` directory:
+   ```bash
+   gcloud auth login
+   gcloud config set project YOUR_PROJECT_ID
+   gcloud run deploy focusflow-backend \
+     --source . \
+     --region us-central1 \
+     --allow-unauthenticated \
+     --memory 1Gi
+   ```
+4. Update `VITE_DETECTION_API_URL` (locally and on Vercel) with the emitted `https://focusflow-backend-*.run.app` URL so the frontend hits the Cloud Run service.
+
 ## API Endpoints
 
 ### `POST /detect`
