@@ -1,7 +1,8 @@
 
 
 const API_BASE_URL =
-  import.meta.env.VITE_DETECTION_API_URL || 'https://focusflow-b2ly.onrender.com'
+  import.meta.env.VITE_DETECTION_API_URL ||
+  'https://focusflow-production-b939.up.railway.app'
 
 
 export async function videoFrameToBlob(videoElement) {
