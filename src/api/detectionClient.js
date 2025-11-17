@@ -2,7 +2,7 @@
 
 const API_BASE_URL =
   import.meta.env.VITE_DETECTION_API_URL ||
-  'https://focusflow-production-b939.up.railway.app'
+  'https://focusflow-backend-962980262153.us-central1.run.app'
 
 
 export async function videoFrameToBlob(videoElement) {

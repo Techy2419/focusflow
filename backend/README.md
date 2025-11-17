@@ -50,9 +50,9 @@ wget https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landma
 python main.py
 ```
 
-Server starts at: `https://focusflow-production-b939.up.railway.app` (local dev: `http://localhost:8000`)
+Server starts at: `https://focusflow-backend-962980262153.us-central1.run.app` (local dev: `http://localhost:8000`)
 
-API docs: `https://focusflow-production-b939.up.railway.app/docs`
+API docs: `https://focusflow-backend-962980262153.us-central1.run.app/docs`
 
 ## Deploying to Google Cloud Run
 

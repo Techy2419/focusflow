@@ -38,7 +38,7 @@ Create `.env` file:
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 VITE_GEMINI_API_KEY=your_gemini_api_key
-VITE_DETECTION_API_URL=https://focusflow-production-b939.up.railway.app
+VITE_DETECTION_API_URL=https://focusflow-backend-962980262153.us-central1.run.app
 ```
 
 Get keys:
@@ -57,7 +57,7 @@ cd backend
 pip install -r requirements.txt
 python main.py
 ```
-Backend runs on `https://focusflow-production-b939.up.railway.app` (local fallback: `http://localhost:8000`)
+Backend runs on `https://focusflow-backend-962980262153.us-central1.run.app` (local fallback: `http://localhost:8000`)
 
 If you deploy your own frontend, add its URL to `ALLOWED_ORIGINS` in `backend/main.py` so CORS permits browser calls.
 

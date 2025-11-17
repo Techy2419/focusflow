@@ -31,7 +31,7 @@ ALLOWED_ORIGINS = [
     "https://focusflow-dev.vercel.app",
     "https://focusflow-self-one.vercel.app",
     "https://focusflow.vercel.app",
-    "https://focusflow-production-b939.up.railway.app",
+    "https://focusflow-backend-962980262153.us-central1.run.app",
 ]
 
 app.add_middleware(
@@ -559,7 +559,7 @@ async def detect(file: UploadFile = File(...)):
 if __name__ == "__main__":
     import uvicorn
     print("🚀 Starting FocusFlow Detection API...")
-    print("☁️ Cloud deployment: https://focusflow-production-b939.up.railway.app")
+    print("☁️ Cloud deployment: https://focusflow-backend-962980262153.us-central1.run.app")
     print("🖥️ Local server will be available at: http://localhost:8000")
-    print("📖 API docs (cloud): https://focusflow-production-b939.up.railway.app/docs")
+    print("📖 API docs (cloud): https://focusflow-backend-962980262153.us-central1.run.app/docs")
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
