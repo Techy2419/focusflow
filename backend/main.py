@@ -29,12 +29,15 @@ ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:4173",
     "https://focusflow-dev.vercel.app",
+    "https://focusflow-self-one.vercel.app",
+    "https://focusflow.vercel.app",
     "https://focusflow-b2ly.onrender.com",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://([a-z0-9-]+[.])*vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
