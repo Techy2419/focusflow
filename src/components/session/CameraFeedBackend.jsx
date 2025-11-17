@@ -211,8 +211,8 @@ export default function CameraFeedBackend({ onDistractionDetected, controlRef, c
               Camera AI Disabled
             </h4>
             <p className="text-sm text-gray-600 max-w-xs mb-3">
-              Using Python MediaPipe backend for detection.
-              Start the detection server first!
+              Using Python MediaPipe backend for detection via our Render deployment.
+              Make sure the cloud backend is online before starting.
             </p>
             {backendStatus && backendStatus.ready && (
               <div className="flex items-center gap-2 text-xs text-success">
@@ -231,7 +231,7 @@ export default function CameraFeedBackend({ onDistractionDetected, controlRef, c
             <span>Powered by MediaPipe (Python CPU)</span>
             <span className="flex items-center gap-1">
               <Server size={12} />
-              localhost:8000
+              focusflow-b2ly.onrender.com
             </span>
           </div>
         </div>

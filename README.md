@@ -38,6 +38,7 @@ Create `.env` file:
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 VITE_GEMINI_API_KEY=your_gemini_api_key
+VITE_DETECTION_API_URL=https://focusflow-b2ly.onrender.com
 ```
 
 Get keys:
@@ -56,7 +57,7 @@ cd backend
 pip install -r requirements.txt
 python main.py
 ```
-Backend runs on `localhost:8000`
+Backend runs on `https://focusflow-b2ly.onrender.com` (local fallback: `http://localhost:8000`)
 
 ### 5. Run the App
 ```bash

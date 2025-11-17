@@ -547,6 +547,7 @@ async def detect(file: UploadFile = File(...)):
 if __name__ == "__main__":
     import uvicorn
     print("🚀 Starting FocusFlow Detection API...")
-    print("📡 Server will be available at: http://localhost:8000")
-    print("📖 API docs at: http://localhost:8000/docs")
+    print("☁️ Cloud deployment: https://focusflow-b2ly.onrender.com")
+    print("🖥️ Local server will be available at: http://localhost:8000")
+    print("📖 API docs (cloud): https://focusflow-b2ly.onrender.com/docs")
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")

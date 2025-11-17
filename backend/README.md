@@ -50,9 +50,9 @@ wget https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landma
 python main.py
 ```
 
-Server starts at: `http://localhost:8000`
+Server starts at: `https://focusflow-b2ly.onrender.com` (local dev: `http://localhost:8000`)
 
-API docs: `http://localhost:8000/docs`
+API docs: `https://focusflow-b2ly.onrender.com/docs`
 
 ## API Endpoints
 
